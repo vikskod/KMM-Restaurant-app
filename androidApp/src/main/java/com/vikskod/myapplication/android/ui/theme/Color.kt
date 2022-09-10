@@ -1,4 +1,4 @@
-package com.vikskod.myapplication.android.theme
+package com.vikskod.myapplication.android.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

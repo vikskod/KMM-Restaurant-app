@@ -7,6 +7,7 @@ class ImplRepository(
     private val ktorService: AbstractKtorService
 ) : AbstractRepository() {
 
-    override suspend fun getAllRestaurants(city: String) = ktorService.getRestaurants(city = city)
+    override suspend fun getAllRestaurants(city: String, count: Int) =
+        ktorService.getRestaurants(city = city, count = count)
 
 }

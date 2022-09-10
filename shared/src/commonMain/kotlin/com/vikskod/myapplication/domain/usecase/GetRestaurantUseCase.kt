@@ -9,10 +9,9 @@ class GetRestaurantUseCase(
     private val repository: AbstractRepository,
     private val responsehandler: ResponseHandler
 ) {
-    operator fun invoke(page: Int, pageSize: Int = 20, country: String = "us") = flow {
+    operator fun invoke(city: String, count: Int) = flow {
 
-        val response =
-            repository.getAllRestaurants(page = page, pageSize = pageSize, country = country)
+        val response = repository.getAllRestaurants(city = city, count = count)
 
         emit(responsehandler.handleSuccess(response.data))
 

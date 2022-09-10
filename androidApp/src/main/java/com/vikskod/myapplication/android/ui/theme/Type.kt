@@ -1,4 +1,4 @@
-package com.vikskod.myapplication.android.theme
+package com.vikskod.myapplication.android.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

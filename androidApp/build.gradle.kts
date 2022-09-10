@@ -49,4 +49,9 @@ dependencies {
     implementation("androidx.compose.material3:material3:$material3Version")
     implementation("androidx.compose.ui:ui-tooling-preview:$composeVersion")
     implementation("androidx.activity:activity-compose:1.5.1")
+
+    implementation("io.insert-koin:koin-androidx-compose:3.1.4")
+
+    // Coil for image
+    implementation("io.coil-kt:coil-compose:2.1.0")
 }

@@ -5,7 +5,7 @@ import com.vikskod.myapplication.domain.util.DataState
 
 abstract class AbstractKtorService {
 
-    abstract suspend fun getRestaurants(city: String): DataState<RestaurantDTO>
+    abstract suspend fun getRestaurants(city: String, count: Int): DataState<RestaurantDTO>
 
 }
 

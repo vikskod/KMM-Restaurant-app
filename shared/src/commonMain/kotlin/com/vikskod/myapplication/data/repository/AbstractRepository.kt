@@ -5,5 +5,5 @@ import com.vikskod.myapplication.domain.util.DataState
 
 abstract class AbstractRepository {
 
-    abstract suspend fun getAllRestaurants(city: String): DataState<RestaurantDTO>
+    abstract suspend fun getAllRestaurants(city: String, count: Int): DataState<RestaurantDTO>
 }

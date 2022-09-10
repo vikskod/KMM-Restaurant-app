@@ -1,4 +1,4 @@
-package com.vikskod.myapplication.android
+package com.vikskod.myapplication.android.ui.home
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,11 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.vikskod.myapplication.Greeting
-import com.vikskod.myapplication.android.theme.ComposeMaterial3Theme
-
-fun greet(): String {
-    return Greeting().greeting()
-}
+import com.vikskod.myapplication.android.ui.home.Home
+import com.vikskod.myapplication.android.ui.theme.ComposeMaterial3Theme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +33,6 @@ fun MainView() {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = greet())
+        Home()
     }
 }

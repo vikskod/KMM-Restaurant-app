@@ -1,13 +1,14 @@
 package com.vikskod.myapplication.presentation
 
-import com.vikskod.myapplication.data.remote.dto.Restaurant
+import com.vikskod.myapplication.data.remote.dto.RestaurantDTO
 
 data class RestaurantListState(
     val isLoading: Boolean = true,
-    val allRestaurantData: List<Restaurant> = emptyList(),
+    val allRestaurantData: RestaurantDTO? = null,
     val error: Error = Error(),
     val isSuccess: Boolean = false,
-    val page: Int = 1
+    val city: String = "Sydney",
+    val count: Int = 15
 )
 
 data class Error(

@@ -13,15 +13,17 @@ class ImplKtorService(
     private val httpClient: HttpClient,
 ) : AbstractKtorService() {
 
-    override suspend fun getRestaurants(city: String): DataState<RestaurantDTO> {
+    override suspend fun getRestaurants(city: String, count: Int): DataState<RestaurantDTO> {
 
         return try {
             DataState.Success(httpClient.get("$BASE_URL") {
+                url("search")
                 header("user-key", API_KEY)
                 parameter("entity_id", 56625527)
                 parameter("entity_type", "available")
                 parameter("q", city)
-                parameter("count", 1)
+                parameter("start", 1)
+                parameter("count", count)
                 parameter("sort", "available")
                 parameter("order", "available")
             }.body())
