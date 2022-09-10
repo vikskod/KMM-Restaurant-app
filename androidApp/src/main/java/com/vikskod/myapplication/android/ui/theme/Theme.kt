@@ -1,4 +1,4 @@
-package com.vikskod.myapplication.android.theme
+package com.vikskod.myapplication.android.ui.theme
 
 import android.app.Activity
 import android.os.Build

@@ -17,10 +17,12 @@ class ImplKtorService(
 
         return try {
             DataState.Success(httpClient.get("$BASE_URL") {
+                url("search")
                 header("user-key", API_KEY)
                 parameter("entity_id", 56625527)
                 parameter("entity_type", "available")
                 parameter("q", city)
+                parameter("start", 1)
                 parameter("count", 1)
                 parameter("sort", "available")
                 parameter("order", "available")
