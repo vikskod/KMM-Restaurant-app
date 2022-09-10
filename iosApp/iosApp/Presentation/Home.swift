@@ -16,23 +16,17 @@ struct Home: View {
         
         ZStack(){
             switch true {
-                
             case viewmodel.state.error.isError:
                 Text(viewmodel.state.error.errorMessage)
                 
             case viewmodel.state.isSuccess:
                 List{
-                    
                     ForEach(viewmodel.state.allRestaurantData!.restaurants , id: \.restaurant){ item in
-                        RestaurantRow( restaurant: item.restaurant,onclick: {
-                            print("==> ")
-                        })
+                        RestaurantRow( restaurant: item.restaurant,onclick: { })
                     }
-                    
                 }.frame( maxWidth: .infinity)
                     .edgesIgnoringSafeArea(.all)
                     .listStyle(PlainListStyle())
-                
                 
             case viewmodel.state.isLoading:
                 ProgressView()

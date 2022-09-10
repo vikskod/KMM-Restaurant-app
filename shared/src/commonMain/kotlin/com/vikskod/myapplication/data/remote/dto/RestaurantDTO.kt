@@ -4,6 +4,9 @@ package com.vikskod.myapplication.data.remote.dto
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+// Data transfer object for the restaurant details
+// Using just the required fields from the payload
+
 @Serializable
 data class RestaurantDTO(
     @SerialName("restaurants")
